@@ -1,25 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Provider } from "./components/ui/provider";
+import { EmptyState } from "./components/ui/empty-state";
+import { LuShoppingCart } from "react-icons/lu";
+import TooltipComponent from './TooltipComponent';
 import './App.css';
-
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Provider>
+        <div className='App'>
+          <EmptyState
+            icon={<LuShoppingCart />}
+            title="Your cart is empty"
+            description="Explore our products and add items to your cart"
+          />
+          <TooltipComponent description='Click to Add New Items for your cart' />
+        </div>
+      </Provider>
   );
 }
 
