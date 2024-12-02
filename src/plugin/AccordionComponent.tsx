@@ -10,6 +10,7 @@ const AccordionComponent = () => {
         { value: "a", title: "First Item", text: "Lorem ipsum odor amet, consectetuer adipiscing elit. Dictumst bibendum potenti magnis porttitor phasellus natoque platea volutpat conubia. Pretium vitae tempus luctus tincidunt magna orci taciti feugiat. Eget mi erat fames mi fermentum urna congue. Senectus ridiculus pretium ligula dapibus sit." },
         { value: "b", title: "Second Item", text: "Lorem ipsum odor amet, consectetuer adipiscing elit. Dictumst bibendum potenti magnis porttitor phasellus natoque platea volutpat conubia. Pretium vitae tempus luctus tincidunt magna orci taciti feugiat. Eget mi erat fames mi fermentum urna congue. Senectus ridiculus pretium ligula dapibus sit." },
         { value: "c", title: "Third Item", text: "Lorem ipsum odor amet, consectetuer adipiscing elit. Dictumst bibendum potenti magnis porttitor phasellus natoque platea volutpat conubia. Pretium vitae tempus luctus tincidunt magna orci taciti feugiat. Eget mi erat fames mi fermentum urna congue. Senectus ridiculus pretium ligula dapibus sit." },
+        { value: "d", title: "Fuorth Item", text: "Lorem ipsum odor amet, consectetuer adipiscing elit. Dictumst bibendum potenti magnis porttitor phasellus natoque platea volutpat conubia. Pretium vitae tempus luctus tincidunt magna orci taciti feugiat. Eget mi erat fames mi fermentum urna congue. Senectus ridiculus pretium ligula dapibus sit." }
       ];
 
     return (

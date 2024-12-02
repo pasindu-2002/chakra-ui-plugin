@@ -20,6 +20,19 @@ const CookiesConfirm = () => {
         setOpen(true);
     }, []);
 
+    // Accept cookies
+    const handleAcceptCookies = () => {
+        document.cookie = "cookies_accepted=true; path=/; max-age=" + 60*60*24*365;
+        console.log("Cookies accepted");
+        setOpen(false);
+    };
+
+    // Reject cookies
+    const handleRejectCookies = () => {
+        console.log("Cookies rejected");
+        setOpen(false);
+    };
+
     return (
         <DialogRoot lazyMount open={open} onOpenChange={(e) => setOpen(e.open)}>
             <DialogContent>
@@ -31,10 +44,11 @@ const CookiesConfirm = () => {
                 </DialogBody>
                 <DialogFooter>
                     <DialogActionTrigger asChild>
-                        <Button variant="outline">Reject Cookies</Button>
+                        <Button variant="outline" onClick={handleRejectCookies}>Reject Cookies</Button>
                     </DialogActionTrigger>
-                    <Button>Accept All Cookies</Button>
+                    <Button onClick={handleAcceptCookies}>Accept All Cookies</Button>
                 </DialogFooter>
+                <DialogCloseTrigger />
             </DialogContent>
         </DialogRoot>
     );
