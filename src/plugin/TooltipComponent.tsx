@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '@chakra-ui/react';
-import { Tooltip } from "./components/ui/tooltip"
+import { Tooltip } from "../components/ui/tooltip"
 
 const TooltipComponent = ({ description }: { description: string }) => {
     return (
