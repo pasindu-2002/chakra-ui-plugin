@@ -12,6 +12,7 @@ import {
 
 import { Button } from "../components/ui/button"
 import AccordionComponent from "./AccordionComponent";
+import Cookies from 'js-cookie';
 
 const CookiesConfirm = () => {
     const [open, setOpen] = useState(true);
@@ -22,14 +23,14 @@ const CookiesConfirm = () => {
 
     // Accept cookies
     const handleAcceptCookies = () => {
-        document.cookie = "cookies_accepted=true; path=/; max-age=" + 60*60*24*365;
-        console.log("Cookies accepted");
+        Cookies.set('username', 'Pasindu', { expires: 7 });
+        console.log("Cookies Accepted");
         setOpen(false);
     };
 
     // Reject cookies
     const handleRejectCookies = () => {
-        console.log("Cookies rejected");
+        console.log("Cookies Rejected");
         setOpen(false);
     };
 
@@ -52,6 +53,8 @@ const CookiesConfirm = () => {
             </DialogContent>
         </DialogRoot>
     );
+
+    
 };
 
 export default CookiesConfirm;
