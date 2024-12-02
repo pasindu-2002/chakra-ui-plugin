@@ -35,7 +35,6 @@ const CookiesConfirm = () => {
                     </DialogActionTrigger>
                     <Button>Accept All Cookies</Button>
                 </DialogFooter>
-                <DialogCloseTrigger />
             </DialogContent>
         </DialogRoot>
     );
